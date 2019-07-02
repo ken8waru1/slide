@@ -1,0 +1,11 @@
+  [1m[35m (433.8ms)[0m  [1m[35mCREATE DATABASE "slide_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (428.4ms)[0m  [1m[35mCREATE DATABASE "slide_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2019-07-02 10:40:39 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/producer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/producer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (3.4ms)
+Completed 200 OK in 16ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
