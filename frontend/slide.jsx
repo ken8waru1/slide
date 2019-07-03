@@ -7,23 +7,23 @@ import { login, logout } from './actions/session_actions'
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   let preloadedState;
-  if (window.currentUser) {
-    preloadedState = {
-      entities: {
-        users: { [window.currentUser.id]: window.currentUser }
-      },
-      session: {
-        currentUserId: window.currentUser.id
-      }
-    }
-  }
+  // if (window.currentUser) {
+  //   preloadedState = {
+  //     entities: {
+  //       users: { [window.currentUser.id]: window.currentUser }
+  //     },
+  //     session: {
+  //       currentUserId: window.currentUser.id
+  //     }
+  //   }
+  // }
 
   const store = configureStore(preloadedState);
   //TESTING START 
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
-  window.login = login;
-  window.logout = logout;
+  // window.getState = store.getState;
+  // window.dispatch = store.dispatch;
+  // window.login = login;
+  // window.logout = logout;
   //TESTING END
 
   ReactDOM.render(<Root store={store} />, root);

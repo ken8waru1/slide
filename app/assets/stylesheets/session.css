@@ -1,41 +1,35 @@
 html {
   height: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 .vsc-initialized {
   height: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 #root {
   height: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 #main-section {
-  margin: 0;
   height: 100%;
 }
 
 .session-form-container {
+  display: block;
   height: 100%;
   background-color: #23272A;
 }
 
 .session-form {
+  display: block;
   box-shadow: 3px 0px 5px #1f1f1f;
   border-radius: .25rem;
   border-color: 1px solid #868686;
   box-sizing: border-box;
   position: absolute;
-  width: 30%;
+  width: 40%;
   text-align: center;
   background-color: #53585f;
-  height: 500px;
   left: 35%;
   top: 15%;
   padding-top: 2%;
@@ -86,7 +80,8 @@ html {
 .session-submit {
   box-sizing: border-box;
   padding: 10px;
-  margin-top: 5%;
+  margin-top: 2%;
+  margin-bottom: 5px;
   border-color: transparent;
   border-radius: .25rem;
   width: 70%;
