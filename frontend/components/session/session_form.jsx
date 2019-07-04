@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
-
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
@@ -12,6 +11,10 @@ class SessionForm extends React.Component {
     }
     this.handleClick = this.handleClick.bind(this);
     this.demoLogin = this.demoLogin.bind(this)
+  }
+
+  componentDidMount() {
+    this.props.removeErrors()
   }
 
   handleClick(e) {
@@ -46,19 +49,6 @@ class SessionForm extends React.Component {
     }
 
     this.props.processForm(this.state);
-
-    // if (demoUser.email) {
-    //   setTimeout(() => this.setState({ 
-    //     email: demoUser.email.concat(demoUser.email.slice(0, 1)),
-    //     demoUser: { email: demoUser.email.slice(1) },
-    //   }), 100)
-    // } else if(demoUser.password) {
-    //   setTimeout(() => this.setState({
-    //     password: this.state.password.concat(demoUser.password.slice(0, 1)),
-    //     demoUser: { password: demoUser.password.slice(1) }
-    //   }), 100)
-    // } else {
-    //   this.props.processForm(this.state)
   }
 
 

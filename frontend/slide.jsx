@@ -18,13 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     delete window.currentUser
   }
-  
+
   const store = configureStore(preloadedState);
   //TESTING START 
-  // window.getState = store.getState;
-  // window.dispatch = store.dispatch;
-  // window.login = login;
-  // window.logout = logout;
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
+  window.login = login;
+  window.logout = logout;
   //TESTING END
 
   ReactDOM.render(<Root store={store} />, root);
