@@ -21,7 +21,7 @@ html {
   justify-content: center;
   margin: 0 auto;
   height:100%;
-  background-color: #23272A;
+  background-color: #26262C;
 }
 
 .errors ul {
@@ -134,9 +134,3 @@ html {
   font-weight: 300;
 }
 
-/* .color-bar {
-  float: left;
-  height: 100px;
-  padding: 20px;
-  background-color: #E01E59;
-} */

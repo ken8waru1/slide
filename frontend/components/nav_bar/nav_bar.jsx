@@ -8,17 +8,15 @@ export default ({ currentUser, logout }) => {
       <button onClick={logout}>Logout</button>
     </div>
   ) : (
-      <div>
-        <Link className="btn" to="/signup">Sign Up</Link>
-        <Link className="btn" to="/login">Log In</Link>
+      <div className="nav-contents">
+        <Link className="login-btn" to="/login">Login</Link>
+        <Link className="get-started" to="/signup">Get Started</Link>
       </div>
     );
   return (
     <header className="nav-bar">
       <h1 className="logo">slide</h1>
-      <div>
         {display}
-      </div>
     </header>
   )
 }
