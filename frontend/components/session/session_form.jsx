@@ -66,10 +66,10 @@ class SessionForm extends React.Component {
           </div> : <></>
         }
 
-        <div className="session-form">
+        <div className="session-form" >
           <span className="session-description">{this.props.formType === 'Signup' ? "Slide into Everyone's DMs" : "Sign in to Slide" }</span>
           {this.props.link}
-          <form className="session-flex" /*onSubmit={this.handleClick}*/>
+          <form className="session-flex" autoComplete="off" /*onSubmit={this.handleClick}*/>
             <label>
               <h3 className="session-field">Email</h3>
               <input className="session-input" autoComplete="off" type="text" onChange={this.updateField('email')} value={this.state.email} placeholder="Email"/>
