@@ -15,24 +15,59 @@ html {
 }
 
 .session-form-container {
-  display: block;
-  height: 100%;
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  height:100%;
   background-color: #23272A;
 }
 
-.session-form {
-  display: block;
+.errors ul {
+  list-style: none;
+}
+
+.errors ul li {
+  list-style: none;
+  text-align: left;
+}
+
+.errors {
+  text-align: left;
+  margin: 0 auto;
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   box-shadow: 3px 0px 5px #1f1f1f;
   border-radius: .25rem;
   border-color: 1px solid #868686;
   box-sizing: border-box;
-  position: absolute;
-  width: 40%;
+  width: 500px;
   text-align: center;
   background-color: #53585f;
-  left: 35%;
-  top: 15%;
+  margin-bottom: 20px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  border-left: 8px solid #E01E59;;
+}
+
+.session-form {
   padding-top: 2%;
+  margin: 0 auto;
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 3px 0px 5px #1f1f1f;
+  border-radius: .25rem;
+  border-color: 1px solid #868686;
+  box-sizing: border-box;
+  width: 500px;
+  text-align: center;
+  background-color: #53585f;
 }
 
 .session-input {
@@ -66,6 +101,7 @@ html {
   width: 80%;
   color: white;
   font-family: 'Roboto', sans-serif;
+  font-weight: 400;
   margin: 0;
   position: relative;
   text-align: left;
@@ -85,7 +121,7 @@ html {
   border-color: transparent;
   border-radius: .25rem;
   width: 70%;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 15px;
   color: white;
   font-family: 'Roboto', sans-serif;
@@ -95,5 +131,12 @@ html {
 .conditional-session {
   font-family: 'Roboto', sans-serif;
   color: white;
-  font-weight: lighter;
+  font-weight: 300;
 }
+
+/* .color-bar {
+  float: left;
+  height: 100px;
+  padding: 20px;
+  background-color: #E01E59;
+} */
