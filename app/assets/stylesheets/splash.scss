@@ -1,0 +1,39 @@
+.splash-container {
+  position: relative;
+  height: 100%;
+  background-color: #53585f;
+}
+
+.asana-icon {
+  width: 20px; 
+  height: 20px; 
+  margin-top: 10%;
+  margin-left: 50%;
+  transform-origin: 100% center; 
+  position: absolute; 
+  animation: rot 1s linear reverse infinite;
+}
+
+.atlassian-icon {
+  width: 20px; 
+  height: 20px; 
+  margin-top: 5%;
+  margin-left: 80%;
+  transform-origin: 100% center; 
+  position: absolute; 
+  animation: rot 1s linear reverse infinite;
+}
+
+
+@keyframes rot {
+	from {
+		transform: rotate(0deg)
+		           translate(-20px)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(-20px) 
+		           rotate(-360deg);
+	}
+}

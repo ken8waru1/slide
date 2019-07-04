@@ -15,8 +15,8 @@ export default ({ currentUser, logout }) => {
     );
   return (
     <header className="nav-bar">
-      <h1 className="logo">slide</h1>
-        {display}
+      <img className="logo" src={window.images.logo} />
+      {display}
     </header>
   )
 }
