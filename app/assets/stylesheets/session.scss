@@ -20,10 +20,6 @@ body {
 
 .session-form-container {
   position: relative;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // margin: 0 auto;
   padding-top: 100px;
   height:100%;
   background-color: #23272A;
@@ -135,11 +131,16 @@ body {
   font-size: 15px;
   color: white;
   font-family: 'Roboto', sans-serif;
-  background-color: #7289DA
+  background-color: #7289DA;
+  cursor: pointer;
 }
 
 .session-submit:hover {
   background-color: #667BC4;
+}
+
+.session-submit:focus {
+  outline: none;
 }
 
 .conditional-session {

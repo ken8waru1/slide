@@ -159,6 +159,7 @@
   border-radius: 4px;
   border: none;
   width: 180px;
+  cursor: pointer;
 }
 
 .try-input {
@@ -182,6 +183,10 @@
 
 .try-submit:hover {
   background-color: #489bbd;
+}
+
+.try-submit:focus {
+  outline: none;
 }
 
 .get-started:hover {
