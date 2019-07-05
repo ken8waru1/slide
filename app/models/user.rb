@@ -1,8 +1,33 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :bigint           not null, primary key
+#  email           :string           not null
+#  display_name    :string           not null
+#  password_digest :string           not null
+#  session_token   :string           not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
+
 class User < ApplicationRecord
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }, presence: true, uniqueness: true
   validates :session_token, presence: true, uniqueness: true
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
   validates :password_digest, :display_name, presence: true
+
+  has_many :created_channels, 
+    foreign_key: :creator_id,
+    class_name: :Channel
+
+  has_many :subscriptions,
+    foreign_key: :user_id,
+    class_name: :Subscription
+
+  has_many :subscribed_channels,
+    through: :subscriptions,
+    source: :channel
 
   before_validation :ensure_session_token
 
@@ -33,3 +58,9 @@ class User < ApplicationRecord
     self.session_token
   end
 end
+
+
+
+
+
+
