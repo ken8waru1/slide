@@ -35,7 +35,7 @@ class SplashPage extends React.Component {
               <p className="splash-snip">Slide gives your team the power and alignment you need to do your best work</p>
             <div className="tryit">
               <form onSubmit={this.handleClick} className="try-form">
-                <input className="try-input" onChange={this.updateEmail} type="text" /><input className="try-submit" type="submit" value="TRY FOR FREE" />
+                <input className="try-input" placeholder="Your email" onChange={this.updateEmail} type="text" /><input className="try-submit" type="submit" value="TRY FOR FREE" />
               </form>
             </div>
           </div>
