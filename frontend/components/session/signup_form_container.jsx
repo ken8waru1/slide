@@ -3,12 +3,13 @@ import SessionForm from './session_form';
 import { signup, removeErrors } from '../../actions/session_actions'
 
 const mapStateToProps = (state, ownProps) => {
+
   return ({
+    email: '',
     errors: state.errors.session,
     formType: 'Signup',
   })
 }
-
 const mapDispatchToProps = (dispatch) => {
   return ({
     processForm: (user) => dispatch(signup(user)),

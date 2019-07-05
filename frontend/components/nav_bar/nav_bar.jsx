@@ -8,14 +8,14 @@ export default ({ currentUser, logout }) => {
       <button onClick={logout}>Logout</button>
     </div>
   ) : (
-      <div className="nav-contents">
+      <div className="rightbar">
         <Link className="login-btn" to="/login">Login</Link>
-        <Link className="get-started" to="/signup">Get Started</Link>
+        <Link className="get-started" to="/signup">GET STARTED</Link>
       </div>
     );
   return (
     <header className="nav-bar">
-      <img className="logo" src={window.images.logo} />
+      <div className="leftbar"><Link to="/"><img src={window.images.logo} /></Link></div>
       {display}
     </header>
   )

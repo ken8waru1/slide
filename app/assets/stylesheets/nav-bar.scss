@@ -1,52 +1,55 @@
 .nav-bar {
+  box-sizing: border-box;
+  padding-top: 30px;
+  display: flex;
   width: 100%;
   height: 70px;
   position: relative;
   background-color: #53585f;
   z-index: 100;
-}
+  justify-content: space-between;
 
-.nav-contents {
-  float: right;
-  position: absolute;
-  bottom: 25%;
-  left: 90%;
 }
 
 .get-started {
   background-color: #5AC5F0;
-  padding: 10px;
-  position: absolute;
+  padding: .75rem 1rem;
   width: 100px;
   text-align: center;
   text-decoration: none;
-  left: 100%;
-  bottom: 5%;
   color: white;
   font-family: 'Roboto:', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
   border-radius: .25rem;
-  margin-left: 10px;
 }
 
 .login-btn {
   background-color: transparent;
-  /* border: 1px solid grey; */
   box-shadow:inset 0px 0px 0px 1px grey;
-  padding: 10px;
-  position: absolute;
+  padding: .75rem 1rem;
   width: 100px;
   text-align: center;
   text-decoration: none;
-  right: 30%;
-  bottom: 5%;
   color: white;
   font-family: 'Roboto:', sans-serif;
   border-radius: .25rem;
-  margin-right: 5px;
+  font-size: 15px;
+  margin-right: 20px
 }
 
-.logo {
-  width: 25px;
-  margin-left: 20%;
-  margin-top: 25px;
+.floating-icons {
+  float: left;
+}
+
+.leftbar img {
+  height: 25px;
+}
+
+.leftbar {
+  padding-left: 10%;
+}
+
+.rightbar {
+  padding-right: 10%;
 }
