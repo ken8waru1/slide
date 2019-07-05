@@ -175,6 +175,19 @@
   color: white;
 }
 
+.try-input:focus {
+  outline: none;
+  box-shadow:inset 0px 0px 0px 1px #5AC5F0;
+}
+
+.try-submit:hover {
+  background-color: #489bbd;
+}
+
+.get-started:hover {
+  background-color: #489bbd;
+}
+
 .floating-icons {
   float: left;
 }

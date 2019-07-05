@@ -24,6 +24,10 @@
   border-radius: .25rem;
 }
 
+.get-started:hover {
+  background-color: #489bbd;
+}
+
 .login-btn {
   background-color: transparent;
   box-shadow:inset 0px 0px 0px 1px grey;
@@ -36,6 +40,10 @@
   border-radius: .25rem;
   font-size: 15px;
   margin-right: 20px
+}
+
+.login-btn:hover {
+  color: #5AC5F0;
 }
 
 .floating-icons {

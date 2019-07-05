@@ -20,10 +20,11 @@ body {
 
 .session-form-container {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 auto;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // margin: 0 auto;
+  padding-top: 100px;
   height:100%;
   background-color: #23272A;
   min-height: 500px;
@@ -62,7 +63,6 @@ body {
 .session-form {
   padding-top: 2%;
   margin: 0 auto;
-  clear: both;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -113,6 +113,11 @@ body {
   left: 15%;
 }
 
+.session-input:focus {
+  outline: none;
+  border: 1px solid #7289DA;
+}
+
 .session-flex {
   flex-direction: column;
   margin-top: 40px;
@@ -131,6 +136,10 @@ body {
   color: white;
   font-family: 'Roboto', sans-serif;
   background-color: #7289DA
+}
+
+.session-submit:hover {
+  background-color: #667BC4;
 }
 
 .conditional-session {
