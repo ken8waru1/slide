@@ -39,6 +39,6 @@ class Api::ChannelsController < ApplicationController
   private
 
   def channel_params
-    params.require(:channel).permit(:name)
+    params.require(:channel).permit(:name, :is_direct_message)
   end
 end

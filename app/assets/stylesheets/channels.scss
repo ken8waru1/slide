@@ -31,7 +31,7 @@
   text-decoration: none;
   color: white;
   font-family: 'Lato', sans-serif;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 16px
 }
 
@@ -47,6 +47,7 @@
   height: 100%;
   position: absolute;
   left: 85%;
+  cursor: pointer;
 }
 
 .channel-header {
@@ -65,5 +66,22 @@
   content: "\0023";
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
-  margin-right: 5px;
+  margin-right: 10px;
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #36393F;
+  z-index: 10;
+}
+
+.modal-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

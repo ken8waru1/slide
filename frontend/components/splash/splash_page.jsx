@@ -4,6 +4,8 @@ import NavBarContainer from '../nav_bar/nav_bar_container'
 
 class SplashPage extends React.Component {
 
+  
+
   constructor(props) {
     super(props);
     this.state = {

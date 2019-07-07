@@ -13,7 +13,7 @@ class ChannelIndex extends React.Component {
       <div className="chat-container">
         <div className="chat-sidebar">
           <div className="channel-list">
-            <div className="channel-header">Channels<img className="plus-circle" src={window.images.pluscircle} /></div>
+            <div className="channel-header">Channels<img className="plus-circle" onClick={() => this.props.openModal('createChannel')} src={window.images.pluscircle} /></div>
             {channels.map(channel => <ChannelIndexItem key={channel.id} channel={channel} currentChannel={this.props.match.params.channelId} />)}
           </div>
         </div>
