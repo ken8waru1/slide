@@ -18,7 +18,7 @@
   text-align: center;
   text-decoration: none;
   color: white;
-  font-family: 'Roboto:', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 15px;
   font-weight: 500;
   border-radius: .25rem;
@@ -37,7 +37,7 @@
   text-align: center;
   text-decoration: none;
   color: white;
-  font-family: 'Roboto:', sans-serif;
+  font-family: 'Roboto', sans-serif;
   border-radius: .25rem;
   font-size: 15px;
   margin-right: 20px
@@ -61,4 +61,11 @@
 
 .rightbar {
   padding-right: 10%;
+}
+
+.nav-body-container {
+  display: block;
+  height: 100vh;
+  min-height: 650px;
+  background-color: #53585f;
 }

@@ -29,6 +29,8 @@ class User < ApplicationRecord
     through: :subscriptions,
     source: :channel
 
+  has_one_attached :avatar
+
   before_validation :ensure_session_token
 
   attr_reader :password

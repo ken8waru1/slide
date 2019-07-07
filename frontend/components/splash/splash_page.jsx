@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
+import NavBarContainer from '../nav_bar/nav_bar_container'
 
 class SplashPage extends React.Component {
 
@@ -26,7 +27,9 @@ class SplashPage extends React.Component {
 
   render() {
     return (
-      <div className="splash-container">
+      <div className="nav-body-container">
+        <NavBarContainer />
+        <div className="splash-container">
           <div className="splash-description">
             <h1 className="splash-header">Whatever work you do,
               <br/>
@@ -85,6 +88,7 @@ class SplashPage extends React.Component {
               <img className="zoom-icon" src={window.images.zoom} />
             </div>
           </div>
+        </div>
       </div>
     )
   }

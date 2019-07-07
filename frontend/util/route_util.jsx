@@ -9,7 +9,7 @@ const mapStateToProps = state => {
 const Auth = ({component: Component, path, loggedIn, exact}) => (
   <Route path={path} exact={exact} render={ (props) => (
     loggedIn ? (
-      <Redirect to="/" />
+      <Redirect to="/channels/1" />
     ) : (
       <Component {...props} />
     )

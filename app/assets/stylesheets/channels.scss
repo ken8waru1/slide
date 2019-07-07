@@ -1,0 +1,69 @@
+.chat-sidebar {
+  width: 220px;
+  float: left;
+  height: 100vh;
+  min-height: 600px;
+  background-color: #2F3136;
+  display: flex;
+}
+
+.channel-name-container {
+  max-width: 220px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  margin: 0;
+}
+
+.channel-name-container:hover {
+  background-color: #25272A;
+}
+
+.channel-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 20%;
+}
+
+.channel-name {
+  text-decoration: none;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: 200;
+  font-size: 16px
+}
+
+#selected-channel {
+  background-color: #40444B;
+}
+
+.channel-name:visited {
+  color: white;
+}
+
+.plus-circle {
+  height: 100%;
+  position: absolute;
+  left: 85%;
+}
+
+.channel-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  padding-left: 15px;
+  margin-bottom: 5px;
+}
+
+.channel-name-container::before {
+  content: "\0023";
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  margin-right: 5px;
+}
