@@ -8,11 +8,15 @@ class CreateChannelForm extends React.Component {
   render () {
     return (
       <div>
-        <form>
-          <label>
-            <input type="text" />
-          </label>
-        </form>
+        <div className="channel-form-container">
+          <h1>Create a Channel</h1>
+          <p>Channels are where your members try communicate (TRY). They're best when there's a topic and everyone completely ignores it.</p>
+          <form>
+            <label><div>Name</div>
+              <input type="text" />
+            </label>
+          </form>
+        </div>
       </div>
     )
   }
