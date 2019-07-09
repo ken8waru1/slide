@@ -1,4 +1,5 @@
 .chat-sidebar {
+  position: relative;
   width: 220px;
   float: left;
   height: 100vh;
@@ -20,10 +21,12 @@
 }
 
 .channel-list {
+  position: absolute;
+  top: 10%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   height: 20%;
 }
 
@@ -32,6 +35,7 @@
   color: white;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
+  font-style: bold;
   font-size: 16px
 }
 
@@ -51,13 +55,10 @@
 }
 
 .channel-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
   position: relative;
   color: white;
   font-family: 'Lato', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   padding-left: 15px;
   margin-bottom: 5px;
 }
@@ -69,6 +70,120 @@
   margin-right: 10px;
 }
 
+.channel-form-container {
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.create-channel-header {
+  font-size: 34px;
+  line-height: 41px;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+  color: white;
+  margin-bottom: 0px
+}
+
+.channel-field {
+  font-size: 15px;
+  text-decoration: none;
+  box-sizing: border-box;
+  width: 80%;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  margin: 0;
+  position: relative;
+  text-align: left;
+}
+
+.channel-input {
+  display: block;
+  padding: 15px;
+  color: white;
+  box-sizing: border-box;
+  width: 80%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: .25rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  border: 1px solid black;
+  background-color: transparent;
+}
+
+.channel-input:focus {
+  outline: none;
+  border: 1px solid #7289DA;
+}
+
+.create-channel-info {
+  font-family: 'Lato', sans-serif;
+  color: #B9BBBE;
+  font-weight: 400;
+  margin-bottom: 50px;
+  width: 80%;
+}
+
+#optional-purpose {
+  display: inline-block;
+  color: #B9BBBE;
+  font-weight: 400;
+}
+
+.channel-submit {
+  margin-right: 10px;
+  box-sizing: content-box;
+  padding: 15px;
+  border-color: transparent;
+  border-radius: .25rem;
+  width: 150px;
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  background-color: #7289DA;
+  cursor: pointer;
+}
+
+.channel-cancel {
+  box-sizing: content-box;
+  display: inline;
+  padding: 15px;
+  border-color: transparent;
+  border-radius: .25rem;
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  background-color: transparent;
+  cursor: pointer;
+  box-shadow:inset 0px 0px 0px 1px #7289DA;
+}
+
+.channel-cancel:focus {
+  outline: none;
+}
+
+.button-container {
+  padding-top: 20px;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.channel-submit:hover {
+  background-color: #667BC4;
+}
+
+.channel-submit:focus {
+  outline: none;
+}
+
 .modal-background {
   position: fixed;
   top: 0;
@@ -77,8 +192,50 @@
   left: 0;
   background: #36393F;
   z-index: 10;
+  // overflow-y: auto;
+}
+
+.fas, .fa-times {
+  color: #B9BBBE;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+
+.esc-container {
+  position: absolute;
+  top: 5%;
+  left: 93%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 4rem;
+  width: 4rem;
+  cursor: pointer;
+  text-align: center;
+  color: #B9BBBE;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+.esc-container:hover {
+  background-color: #23272A;
+  border-radius: 50%;
+}
+
+.contents-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 }
 
 .modal-child {
   position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }

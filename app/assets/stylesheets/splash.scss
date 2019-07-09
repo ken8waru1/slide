@@ -1,9 +1,10 @@
 .splash-container {
   display: flex;
-  height: 100%;
+  height: calc(100vh - 70px);
   background-color: #53585f;
   flex-direction: row;
   justify-content: center;
+  min-height: 500px
 }
 
 .asana-icon {

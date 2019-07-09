@@ -1,0 +1,106 @@
+.sub-btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 80%;
+}
+
+.delete-sub-btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 80%;
+}
+
+.sub-btn {
+  box-sizing: content-box;
+  padding: 15px;
+  border-color: transparent;
+  border-radius: .25rem;
+  width: 150px;
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  background-color: #7289DA;
+  cursor: pointer;
+}
+
+.delete-sub-btn {
+  box-sizing: content-box;
+  padding: 15px;
+  border-color: transparent;
+  border-radius: .25rem;
+  width: 150px;
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  background-color: #7289DA;
+  cursor: pointer;
+}
+
+.chat-container {
+  position: relative;
+  display: flex;
+}
+
+.chat-header {
+  height: 62px;
+  border-bottom: 1px solid #1C1E22;
+}
+
+.chat-header-info {
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  padding-left: 25px;
+  padding-top: 10px;
+}
+
+.fa-user {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.subscriber-count {
+  margin-left: 5px;
+  margin-top: 15px;
+  font-size: 13px;
+  font-family: 'Lato', sans-serif;
+}
+
+.chat-box {
+  background-color: #36393F;
+  width: 100%;
+}
+
+.logout-btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.logout-btn {
+  height: 40px;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #5AC5F0;
+  border-radius: 4px;
+  border: none;
+  width: 80px;
+  cursor: pointer;
+}

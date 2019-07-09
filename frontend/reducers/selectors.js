@@ -3,3 +3,9 @@ export const selectAllChannels = (state) => {
     Object.values(state.entities.channels)
   )
 }
+
+export const selectAllSubscriptions = (state) => {
+  return (
+    Object.values(state.entities.subscriptions)
+  )
+}

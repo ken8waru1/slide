@@ -3,14 +3,14 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import CreateChannelFormContainer from '../../components/channel/create_channel_form_container'
 
-function Modal({ modal, closeModal }) {
+function Modal({ modal, closeModal, currentUser }) {
   if (!modal) {
     return null;
   }
   let component;
   switch (modal) {
     case 'createChannel':
-      component = <CreateChannelFormContainer />;
+      component = <CreateChannelFormContainer currentUser={currentUser} />;
       break;
     default:
       return null;
@@ -25,8 +25,11 @@ function Modal({ modal, closeModal }) {
   );
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
+  const currentUserId = state.session.currentUserId;
+  const currentUser = state.entities.users[currentUserId]
   return ({
+    currentUser: currentUser,
     modal: state.ui.modal
   });
 };

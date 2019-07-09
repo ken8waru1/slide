@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom';
 export default ({ currentUser, logout }) => {
   const display = currentUser ? (
     <div>
-      <h3>Welcome {currentUser.displayName}!</h3>
-      <button onClick={logout}>Logout</button>
+      <div className="rightbar">
+        <Link className="channels-link" to="/channels/1">YOUR CHANNELS</Link>
+      </div>
     </div>
   ) : (
       <div className="rightbar">

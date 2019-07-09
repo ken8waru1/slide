@@ -5,6 +5,7 @@ import Root from './components/root';
 import { login, logout, signup } from './actions/session_actions'
 import { fetchChannels, fetchChannel, createChannel, updateChannel, deleteChannel  } from './actions/channel_actions'
 import { postChannel } from './util/channel_api_util'
+import { fetchSubscriptions, createSubscription, fetchSubscription } from './actions/subscription_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -34,6 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.updateChannel = updateChannel;
   // window.deleteChannel = deleteChannel;
   // window.postChannel = postChannel;
+  // window.fetchSubscriptions = fetchSubscriptions;
+  // window.createSubscription = createSubscription;
+  // window.fetchSubscription = fetchSubscription;
   //TESTING END
 
   ReactDOM.render(<Root store={store} />, root);
