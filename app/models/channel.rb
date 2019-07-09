@@ -25,4 +25,8 @@ class Channel < ApplicationRecord
   has_many :subscribed_users,
     through: :subscriptions,
     source: :user
+
+  has_many :messages,
+    foreign_key: :channel_id,
+    class_name: :Channel
 end

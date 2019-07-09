@@ -1,31 +1,23 @@
 .sub-btn-container {
+  box-sizing: content-box;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: 50%;
-  top: 80%;
+  padding: 10px;
 }
 
 .delete-sub-btn-container {
+  box-sizing: content-box;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: 50%;
-  top: 80%;
+  padding: 10px;
 }
 
 .sub-btn {
   box-sizing: content-box;
-  padding: 15px;
+  padding: 5px;
   border-color: transparent;
   border-radius: .25rem;
-  width: 150px;
+  width: 130px;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 17px;
   color: white;
   font-family: 'Lato', sans-serif;
   background-color: #7289DA;
@@ -34,12 +26,12 @@
 
 .delete-sub-btn {
   box-sizing: content-box;
-  padding: 15px;
+  padding: 5px;
   border-color: transparent;
   border-radius: .25rem;
-  width: 150px;
+  width: 130px;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 17px;
   color: white;
   font-family: 'Lato', sans-serif;
   background-color: #7289DA;
@@ -52,17 +44,21 @@
 }
 
 .chat-header {
-  height: 62px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   border-bottom: 1px solid #1C1E22;
 }
 
 .chat-header-info {
+  position: relative;
   color: white;
   font-family: 'Lato', sans-serif;
   font-size: 18px;
   font-weight: 400;
   padding-left: 25px;
   padding-top: 10px;
+  height: 62px;
 }
 
 .fa-user {
@@ -103,4 +99,21 @@
   border: none;
   width: 80px;
   cursor: pointer;
+}
+
+.chatroom-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.message-list {
+  overflow-y: scroll;
+  height: 300px;
+  width: 400px;
+  border: solid gray 1px;
+}
+.load-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }
