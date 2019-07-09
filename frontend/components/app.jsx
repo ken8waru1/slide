@@ -8,6 +8,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 // import NavBarContainer from './nav_bar/nav_bar_container'
 import SplashPage from './splash/splash_page';
 import Modal from './modal/modal';
+import ChatRoom from './chatroom/chatroom';
 
 const App = () => (
   <div id="main-section">
@@ -16,6 +17,7 @@ const App = () => (
     <AuthRoute exact path="/login" component={LoginFormContainer} />
     <Route exact path="/" component={SplashPage} />
     <AuthRoute exact path="/signup" component={SignupFormContainer} />
+    <Route path="/chatroom" component={ChatRoom} />
   </div>
 );
 

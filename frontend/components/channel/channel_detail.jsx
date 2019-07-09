@@ -1,4 +1,5 @@
 import React from 'react';
+import ChatRoom from "../chatroom/chatroom"
 
 class ChannelDetail extends React.Component {
 
@@ -57,21 +58,24 @@ class ChannelDetail extends React.Component {
     const subbedChannels = this.props.subscriptions.map(subscription => subscription.channelId)
 
     return (
-      <div className="chat-header">
-        <div className="chat-header-info">{`#${this.props.channel.name}`}
-          <div>
-            <i className="far fa-user"></i>
-            <span className="subscriber-count">{this.state.subscribeCount}</span>
+      <div>
+        <div className="chat-header">
+          <div className="chat-header-info">{`#${this.props.channel.name}`}
+            <div>
+              <i className="far fa-user"></i>
+              <span className="subscriber-count">{this.state.subscribeCount}</span>
+            </div>
           </div>
+          {this.props.channel && subbedChannels.includes(this.props.channel.id) ?
+            <div className="delete-sub-btn-container">
+              <button className="delete-sub-btn" onClick={this.handleDelete}>Delete Subscription</button>
+            </div> :
+            <div className="sub-btn-container">
+              <button className="sub-btn" onClick={this.handleSubscribe}>Subscribe to Channel</button>
+            </div>
+          }
         </div>
-        {this.props.channel && subbedChannels.includes(this.props.channel.id) ?
-          <div className="delete-sub-btn-container">
-            <button className="delete-sub-btn" onClick={this.handleDelete}>Delete Subscription</button>
-          </div> :
-          <div className="sub-btn-container">
-            <button className="sub-btn" onClick={this.handleSubscribe}>Subscribe to Channel</button>
-          </div>
-        }
+        
       </div>
     )
   }

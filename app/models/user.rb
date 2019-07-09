@@ -29,6 +29,10 @@ class User < ApplicationRecord
     through: :subscriptions,
     source: :channel
 
+  has_many :messages,
+    foreign_key: :user_id,
+    class_name: :Message
+
   has_one_attached :avatar
 
   before_validation :ensure_session_token
