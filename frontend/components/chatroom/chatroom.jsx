@@ -54,7 +54,7 @@ class ChatRoom extends React.Component {
         <div>ChatRoom</div>
         <button className="load-botton" onClick={this.loadChat.bind(this)}>Load Chat History</button>
         <div className="message-list">{messageList}</div>
-        <MessageForm />
+        <MessageForm channel={this.props.channel} currentUser={this.props.currentUser} />
       </div>
     );
   }

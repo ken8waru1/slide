@@ -75,7 +75,7 @@ class ChannelDetail extends React.Component {
             </div>
           }
         </div>
-        
+        <ChatRoom channel={this.props.channel} currentUser={this.props.currentUser} />
       </div>
     )
   }

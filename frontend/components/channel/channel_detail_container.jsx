@@ -8,14 +8,10 @@ import { fetchChannel } from '../../actions/channel_actions';
 const mapStateToProps = (state, ownProps) => {
   const channelId = ownProps.match.params.channelId;
   const channel = state.entities.channels[channelId];
-  let subscribeCount;
-  // debugger
-  // channel ? subscribeCount = channel.subscribeCount : subscribeCount = 0
 
   return ({
     currentUser: state.entities.users[state.session.currentUserId],
     channel: channel,
-    // subscribeCount: subscribeCount, 
     subscriptions: selectAllSubscriptions(state)
   })
 }
