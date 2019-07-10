@@ -41,3 +41,11 @@ export const fetchMessages = (id) => {
     url: `/api/channels/${id}/messages`
   });
 };
+
+export const fetchUsers = (id) => {
+  return $.ajax({
+    method: 'GET',
+    url: `/api/channels/${id}/users`
+  })
+}
+

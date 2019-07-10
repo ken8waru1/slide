@@ -4,9 +4,9 @@ import NavBar from './nav_bar';
 import { logout } from '../../actions/session_actions';
 
 const mapStateToProps = (state) => {
-  const id = state.session.currentUserId;
+  const currentUser = state.session.currentUser;
   return ({
-    currentUser: id ? state.entities.users[id] : null
+    currentUser: currentUser ? currentUser : null
   })
 }
 

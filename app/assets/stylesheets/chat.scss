@@ -48,6 +48,9 @@
   flex-direction: row;
   justify-content: space-between;
   border-bottom: 1px solid #1C1E22;
+  z-index: 1000;
+  background-color: #36393F;
+  width: 100%;
 }
 
 .chat-header-info {
@@ -74,8 +77,11 @@
 }
 
 .chat-box {
-  background-color: #36393F;
+  // background-color: #36393F;
+  // width: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .logout-btn-container {
@@ -101,19 +107,83 @@
   cursor: pointer;
 }
 
-.chatroom-container {
+.chat-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #36393F;
+  // height: 100%;
+  // max-height: 100vh;
+  // overflow-y: auto;
+  // overflow-x: hidden;
 }
 .message-list {
-  overflow-y: scroll;
-  height: 300px;
-  width: 400px;
-  border: solid gray 1px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  // min-height: calc(100% - 64px);
+  width: calc(100% - 27px);
+  padding-left: 25px
 }
 .load-button {
   position: absolute;
   top: 5px;
   right: 5px;
+}
+
+.message-input-container {
+  display: block;
+  width: calc(100% - 40px);
+  min-height: 40px;
+  margin: 0 12px 0 18px;
+  border: 2px solid grey;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  // min-height: 40px;
+  // margin: 0 12px 0 18px;
+  // display: flex;
+  // flex-direction: row;
+  // align-items: center;
+  // vertical-align: middle;
+  // margin-bottom: 20px;
+}
+
+.chatroom {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.chat-body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.chat-message-box {
+  height: 100%;
+  min-width: 250px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.message-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: calc(100% - 64px);
+}
+
+.message {
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
 }

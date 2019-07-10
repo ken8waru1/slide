@@ -2,6 +2,7 @@ import React from 'react';
 import ChannelIndexItem from './channel_index_item';
 import { Route, Redirect } from 'react-router-dom';
 import ChannelDetailContainer from './channel_detail_container';
+import ChatRoomContainer from '../chatroom/chatroom_container'
 
 class ChannelIndex extends React.Component {
 
@@ -27,6 +28,7 @@ class ChannelIndex extends React.Component {
         </div>
         <div className="chat-box">
           <Route exact path="/channels/:channelId" component={ChannelDetailContainer} />
+          <ChatRoomContainer />
         </div>
       </div>
     )

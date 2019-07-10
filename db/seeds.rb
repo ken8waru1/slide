@@ -10,7 +10,7 @@ ActiveRecord::Base.transaction do
   User.destroy_all
   Channel.destroy_all
 
-  demo_user = User.create({
+  demo_user = User.create!({
     email: "demo@slide",
     display_name: "demo",
     password: "girlsdemo"
