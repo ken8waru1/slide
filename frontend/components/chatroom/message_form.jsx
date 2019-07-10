@@ -3,7 +3,12 @@ import React from 'react';
 class MessageForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { body: "" };
+    this.state = { 
+      body: "",
+      user_id: this.props.currentUser.id,
+      channel_id: this.props.channel
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   update(field) {
@@ -13,15 +18,14 @@ class MessageForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // debugger
-    App.cable.subscriptions.subscriptions[0].speak({ message: this.state.body, channel_id: this.props.channel.id, user_id: this.props.currentUser.id });
+    App[this.props.channel].speak(this.state);
     this.setState({ body: "" });
   }
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit.bind(this)}>
+      <div className="message-input">
+        <form onSubmit={this.handleSubmit}>
           <input type="text" value={this.state.body} onChange={this.update('body')} placeholder="Type message here"/>
           <input type="submit"/>
         </form>

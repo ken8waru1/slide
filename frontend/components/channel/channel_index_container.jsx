@@ -9,7 +9,7 @@ import { logout } from '../../actions/session_actions'
 const mapStateToProps = (state, ownProps) => {
   const channelId = ownProps.match.params.channelId
   return ({
-    currentUser: state.entities.users[state.session.currentUserId],
+    currentUser: state.session.currentUser,
     channel: state.entities.channels[channelId],
     channels: selectAllChannels(state)
   })

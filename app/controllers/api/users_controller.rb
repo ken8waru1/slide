@@ -1,7 +1,8 @@
 class Api::UsersController < ApplicationController
 
   def index
-    @users = User.all
+    @channel = Channel.find_by(id: params[:channel_id])
+    @users = @channel.subscribed_users
   end
 
   def create

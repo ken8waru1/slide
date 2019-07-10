@@ -26,8 +26,7 @@ function Modal({ modal, closeModal, currentUser }) {
 }
 
 const mapStateToProps = (state) => {
-  const currentUserId = state.session.currentUserId;
-  const currentUser = state.entities.users[currentUserId]
+  const currentUser = state.session.currentUser;
   return ({
     currentUser: currentUser,
     modal: state.ui.modal
