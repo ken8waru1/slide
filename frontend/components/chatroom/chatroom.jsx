@@ -36,6 +36,10 @@ class ChatRoom extends React.Component {
       this.props.fetchUsers(channelId)
       this.props.fetchMessages(channelId)
       this.props.createChannelSubscription(channelId, this.props.receiveMessage)
+      delete App[prevProps.match.params.channelId]
+      if (App.cable.subscriptions.subscriptions.length > 1) {
+        App.cable.subscriptions.subscriptions.shift()
+      }
     }
     if (this.state.loaded) {
       document.getElementById('ref-bottom').scrollIntoView()
