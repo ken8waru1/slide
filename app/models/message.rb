@@ -5,7 +5,7 @@ class Message < ApplicationRecord
     foreign_key: :channel_id,
     class_name: :Channel
 
-  belongs_to :user,
+  belongs_to :author,
     foreign_key: :user_id,
     class_name: :User
 

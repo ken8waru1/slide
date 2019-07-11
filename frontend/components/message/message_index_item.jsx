@@ -1,15 +1,14 @@
 import React from 'react';
+import moment from 'moment';
 
-const MessageIndexItem = ({ message, currentUser, users }) => {
-  // let messageAuthor; 
-
-  // users.forEach(user => {
-  //   if (user.id === message.userId) messageAuthor = user
-  // })
+const MessageIndexItem = ({ message }) => {
   return (
     <div className="message">
-      {/* <span>{messageAuthor.displayName}</span> */}
-      {message.body}
+      <div className="message-header">
+        <div className="display-name">{message.author.display_name}</div>
+        <div className="time">{moment(message.createdAt).calendar()}</div>
+      </div>
+      <div className="message-body">{message.body}</div>
     </div>
   )
 }

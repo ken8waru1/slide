@@ -3,6 +3,7 @@ class Api::UsersController < ApplicationController
   def index
     @channel = Channel.find_by(id: params[:channel_id])
     @users = @channel.subscribed_users
+    render :index
   end
 
   def create

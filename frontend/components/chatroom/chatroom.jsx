@@ -54,7 +54,7 @@ class ChatRoom extends React.Component {
     }
     const messageList = this.props.messages.map(message => {
       return (
-        <MessageIndexItem currentUser={this.props.currentUser} message={message} users={this.props.users} />
+        <MessageIndexItem currentUser={this.props.currentUser} message={message} key={message.id} users={this.props.users} />
       );
     });
 
