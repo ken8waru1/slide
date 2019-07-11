@@ -7,5 +7,5 @@ test:
 production:
   adapter: redis
   # url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
-  url: <%= ENV['REDIS_URL'] %>
+  url: redis://redistogo:2f511207d7d3529782f64e414b9bc081@pearlfish.redistogo.com:9788/
   channel_prefix: slide_production
