@@ -8,6 +8,7 @@ class ChatRoom extends React.Component {
     this.state = {
       loaded: false
      };
+    this.bottom = React.createRef();
   }
 
   componentWillMount() {
@@ -25,7 +26,7 @@ class ChatRoom extends React.Component {
       this.props.createChannelSubscription(channelId, this.props.receiveMessage),
     ]).then(() => this.setState({
       loaded: true
-    })).then(() => window.document.getElementById('ref-bottom').scrollIntoView())
+    }))
   }
 
 
@@ -42,7 +43,8 @@ class ChatRoom extends React.Component {
       }
     }
     if (this.state.loaded) {
-      document.getElementById('ref-bottom').scrollIntoView()
+      this.bottom.current.scrollIntoView();
+      this.bottom.current.scrollIntoView();
     }
   }
 
@@ -53,8 +55,21 @@ class ChatRoom extends React.Component {
       )
     }
     const messageList = this.props.messages.map(message => {
+      let image = ''; 
+      let newMessage = Object.assign({}, message);
+
+      if (message.body.includes('jpg')) {
+        image = message.body.slice(message.body.indexOf('https'), message.body.indexOf('jpg')) + 'jpg'
+        if (message.body.length > image.length) newMessage.body = message.body.replace(image, '') 
+      } else if (message.body.includes('png')) {
+        image = message.body.slice(message.body.indexOf('https'), message.body.indexOf('png')) + 'png'
+        if (message.body.length > image.length) newMessage.body = message.body.replace(image, '') 
+      } else if (message.body.includes('gif')) {
+        image = message.body.slice(message.body.indexOf('https'), message.body.indexOf('gif')) + 'gif'
+        if (message.body.length > image.length) newMessage.body = message.body.replace(image, '') 
+      }
       return (
-        <MessageIndexItem currentUser={this.props.currentUser} message={message} key={message.id} users={this.props.users} />
+        <MessageIndexItem currentUser={this.props.currentUser} message={newMessage} image={image} key={message.id} users={this.props.users} />
       );
     });
 
@@ -64,7 +79,7 @@ class ChatRoom extends React.Component {
           <div className="message-list-wrapper">
             <div className="message-list">
               {messageList}
-              <div id='ref-bottom'></div>
+              <div ref={this.bottom}></div>
             </div>
           </div>
           <MessageForm channel={this.props.channel} currentUser={this.props.currentUser} />

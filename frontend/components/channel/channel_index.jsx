@@ -12,14 +12,21 @@ class ChannelIndex extends React.Component {
   }
 
   render () {
-    const { channels } = this.props;
+    const { channels, currentUser } = this.props;
     const currentChannelId = this.props.match.params.channelId;
-
     return (
       <div className="chat-container">
         <div className="chat-sidebar">
-          <div className="logout-btn-container">
-            <button onClick={this.props.logout} className="logout-btn">Logout</button>
+          <div className="sidebar-top">
+            <div className="workspace-info">
+              <div className="workspace-name">slide</div>
+              <div className="logout-btn-container">
+                <i onClick={this.props.logout} className="fas fa-sign-out-alt logout-btn"></i>
+              </div>
+            </div>
+            <div className="status-container">
+              <div className="current-user-name">{currentUser.displayName}</div>
+            </div>
           </div>
           <div className="channel-list">
             <div className="channel-header">Channels<img className="plus-circle" onClick={() => this.props.openModal('createChannel')} src={window.images.pluscircle} /></div>

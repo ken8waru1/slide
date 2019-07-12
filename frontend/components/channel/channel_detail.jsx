@@ -68,10 +68,10 @@ class ChannelDetail extends React.Component {
         </div>
         {this.props.channel && subbedChannels.includes(this.props.channel.id) ?
           <div className="delete-sub-btn-container">
-            <button className="delete-sub-btn" onClick={this.handleDelete}>Delete Subscription</button>
+            <button className="delete-sub-btn" onClick={this.handleDelete}>Leave Channel</button>
           </div> :
           <div className="sub-btn-container">
-            <button className="sub-btn" onClick={this.handleSubscribe}>Subscribe to Channel</button>
+            <button className="sub-btn" onClick={this.handleSubscribe}>Join Channel</button>
           </div>
         }
       </div>
