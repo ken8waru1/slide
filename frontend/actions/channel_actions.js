@@ -56,9 +56,6 @@ export const createChannelSubscription = (channelId, receiveMessage) => dispatch
       received: function (data) {
         const message = JSON.parse(data.message);
         receiveMessage(message);
-      },
-      // speak: function (message) {
-      //   return this.perform('speak', { message });
-      // }
+      }
     })
 }

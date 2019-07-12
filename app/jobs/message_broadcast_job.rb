@@ -2,7 +2,6 @@ class MessageBroadcastJob < ApplicationJob
   queue_as :default
 
   def perform(message)
-    # debugger
     ActionCable.server.broadcast "channel-#{message.channel_id}:messages", message: render_message(message)
   end
 

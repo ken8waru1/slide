@@ -5,7 +5,6 @@ import { fetchChannels, fetchChannel, fetchUsers, createChannelSubscription } fr
 import { fetchMessage, fetchMessages, receiveMessage } from '../../actions/message_actions';
 import { withRouter } from 'react-router-dom'; 
 const mapStateToProps = (state, ownProps) => {
-  // debugger
   return ({
     currentUser: state.session.currentUser,
     users: Object.values(state.entities.users),

@@ -1,7 +1,5 @@
 class ChatChannel < ApplicationCable::Channel
   def subscribed
-    # debugger
-    # debugger
     # stream_from "some_channel"
     stream_from "channel-#{params['id']}:messages"
   end

@@ -17,7 +17,6 @@ class MessageForm extends React.Component {
 
   handleSubmit(e) {
     if (e.key === 'Enter') {
-      // App[this.props.channel].speak({ body: this.state.body, user_id: this.props.currentUser.id, channel_id: this.props.channel });
       App[this.props.channel].send({ message: this.state.body, user_id: this.props.currentUser.id, channel_id: this.props.channel });
       this.setState({ body: "" });
     }
