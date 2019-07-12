@@ -33,9 +33,9 @@ class SplashPage extends React.Component {
         <NavBarContainer />
         <div className="splash-container">
           <div className="splash-description">
-            <h1 className="splash-header">Whatever work you do,
+            <h1 className="splash-header">Whatever work you do (or don't do),
               <br/>
-              you can do it in Slide</h1>
+              just do it in Slide</h1>
 
               <p className="splash-snip">Slide gives your team the power and alignment you need to do your best work</p>
             <div className="tryit">
