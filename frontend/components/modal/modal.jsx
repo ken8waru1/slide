@@ -12,6 +12,9 @@ function Modal({ modal, closeModal, currentUser }) {
     case 'createChannel':
       component = <CreateChannelFormContainer currentUser={currentUser} />;
       break;
+    case 'createDM':
+      // component = 
+      break;
     default:
       return null;
   }

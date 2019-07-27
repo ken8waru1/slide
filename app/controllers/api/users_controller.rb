@@ -1,8 +1,9 @@
 class Api::UsersController < ApplicationController
 
   def index
-    @channel = Channel.find_by(id: params[:channel_id])
-    @users = @channel.subscribed_users
+    # @channel = Channel.find_by(id: params[:channel_id])
+    # @users = @channel.subscribed_users
+    @users = User.all;
     render :index
   end
 
