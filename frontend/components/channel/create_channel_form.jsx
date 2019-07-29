@@ -38,7 +38,7 @@ class CreateChannelForm extends React.Component {
           <p className="create-channel-info">Channels are where your members try communicate (TRY). They're best when there's a topic and everyone completely ignores it.</p>
           <form className="channel-form">
             <label><div className="channel-field">Name</div>
-              <input className="channel-input" type="text" placeholder="e.g. Waifus" onChange={this.updateField('name')} value={this.state.name}/>
+              <input className="channel-input" type="text" placeholder="e.g. Bananas" onChange={this.updateField('name')} value={this.state.name}/>
             </label>
 
             <label><div className="channel-field">Purpose <span id="optional-purpose">(optional)</span></div>

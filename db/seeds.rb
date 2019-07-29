@@ -65,12 +65,6 @@ ActiveRecord::Base.transaction do
     creator_id: nasu.id
   })
 
-
-  filthy_casual_channel = Channel.create!({
-    name: "filthy casuals",
-    creator_id: dant.id
-  })
-
   users = User.all
 
   general_subscription_zooey = Subscription.create!({
@@ -91,11 +85,6 @@ ActiveRecord::Base.transaction do
   granblue_subscription_producer = Subscription.create!({
     user_id: producer.id,
     channel_id: granblue_channel.id
-  })
-
-  filthy_casual_subscription_dant = Subscription.create!({
-    user_id: dant.id,
-    channel_id: filthy_casual_channel.id
   })
 
   users.each do |user| 
@@ -157,12 +146,6 @@ ActiveRecord::Base.transaction do
     channel_id: general_channel.id
   })
 
-  Message.create!({
-    body: 'why am I the only one in here',
-    user_id: dant.id,
-    channel_id: filthy_casual_channel.id
-  })
-  
   Message.create!({
     body: 'takane is best idol',
     user_id: zooey.id,
