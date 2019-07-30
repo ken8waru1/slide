@@ -36,7 +36,7 @@ class ChannelIndex extends React.Component {
           </div>
 
           <div className="dm-list">
-            <div className="channel-header">Direct Messages<img className="plus-circle" onClick={() => this.props.openModal('createChannel')} src={window.images.pluscircle} /></div>
+            <div className="channel-header">Direct Messages<img className="plus-circle" onClick={() => this.props.openModal('createDM')} src={window.images.pluscircle} /></div>
             {directMessages.map(channel => <ChannelIndexItem key={channel.id} channel={channel} currentChannel={currentChannelId} />)}
           </div>
         </div>

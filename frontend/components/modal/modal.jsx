@@ -1,8 +1,8 @@
 import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
-import CreateChannelFormContainer from '../../components/channel/create_channel_form_container'
-
+import CreateChannelFormContainer from '../channel/create_channel_form_container';
+import CreateDMFormContainer from '../direct_messages/create_dm_form_container';
 function Modal({ modal, closeModal, currentUser }) {
   if (!modal) {
     return null;
@@ -13,7 +13,7 @@ function Modal({ modal, closeModal, currentUser }) {
       component = <CreateChannelFormContainer currentUser={currentUser} />;
       break;
     case 'createDM':
-      // component = 
+      component = <CreateDMFormContainer currentUser={currentUser} />
       break;
     default:
       return null;
