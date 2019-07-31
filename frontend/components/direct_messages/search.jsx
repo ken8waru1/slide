@@ -35,7 +35,6 @@ class Search extends React.Component {
   }
 
   render() {
-    // debugger
     const userResults = this.props.users.filter(user => user.displayName.includes(this.state.displayName));
     return (
       <div className="search-container">

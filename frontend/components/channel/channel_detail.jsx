@@ -37,10 +37,10 @@ class ChannelDetail extends React.Component {
       if (subscription.channelId == this.props.channel.id) {
         subId = subscription.id
       }
-    })
+    });
 
-    this.props.deleteSubscription(subId)
-    this.setState({ subscribeCount: this.state.subscribeCount -= 1 })
+    this.props.deleteSubscription(subId);
+    this.setState({ subscribeCount: this.state.subscribeCount -= 1 });
   }
 
   handleSubscribe(e) {
@@ -68,10 +68,10 @@ class ChannelDetail extends React.Component {
         </div>
         {this.props.channel && subbedChannels.includes(this.props.channel.id) ?
           <div className="delete-sub-btn-container">
-            <button className="delete-sub-btn" onClick={this.handleDelete}>Leave Channel</button>
+            <button className="delete-sub-btn" onClick={this.handleDelete}>{ this.props.channel.isDirectMessage ? 'Leave Conversation' : 'Leave Channel' }</button>
           </div> :
           <div className="sub-btn-container">
-            <button className="sub-btn" onClick={this.handleSubscribe}>Join Channel</button>
+            <button className="sub-btn" onClick={this.handleSubscribe}>{ this.props.channel.isDirectMessage ? 'Rejoin Conversation' : 'Join Channel'}</button>
           </div>
         }
       </div>

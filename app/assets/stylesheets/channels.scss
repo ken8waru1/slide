@@ -16,6 +16,14 @@
   margin: 0;
 }
 
+.dm-name-container {
+  max-width: 220px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  margin: 0;
+}
+
 .channel-name-container:hover {
   background-color: #25272A;
 }
@@ -85,11 +93,18 @@
   margin-right: 10px;
 }
 
+.dm-name-container::before {
+  content: "\25CF";
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  color: #39E103;
+  margin-right: 10px;
+}
+
 .channel-form-container {
   padding-top: 150px;
   display: flex;
   flex-direction: column;
-  // justify-content: center;
 }
 
 .dm-form-container {
@@ -263,7 +278,6 @@
   left: 0;
   background: #36393F;
   z-index: 9001;
-  // overflow-y: auto;
 }
 
 .fas, .fa-times {

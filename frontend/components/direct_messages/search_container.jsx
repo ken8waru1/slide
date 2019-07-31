@@ -7,7 +7,6 @@ import { withRouter } from 'react-router-dom';
 import Search from './search';
 
 const mapStateToProps = (state, ownProps) => {
-  // debugger
   const currentUser = state.session.currentUser;
   return ({
     users: Object.values(state.entities.users),

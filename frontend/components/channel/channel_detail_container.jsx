@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import ChannelDetail from './channel_detail';
 import { createSubscription, deleteSubscription } from '../../actions/subscription_actions';
 import { selectAllSubscriptions } from '../../reducers/selectors';
-import { fetchChannel } from '../../actions/channel_actions';
+import { fetchChannel, fetchChannels } from '../../actions/channel_actions';
 
 const mapStateToProps = (state, ownProps) => {
   const channelId = ownProps.match.params.channelId;
@@ -20,7 +20,8 @@ const mapDispatchToProps = (dispatch) => {
   return ({
     createSubscription: (subscription) => dispatch(createSubscription(subscription)),
     deleteSubscription: (id) => dispatch(deleteSubscription(id)),
-    fetchChannel: (id) => dispatch(fetchChannel(id))
+    fetchChannel: (id) => dispatch(fetchChannel(id)),
+    fetchChannels: () => dispatch(fetchChannels())
   })
 }
 
