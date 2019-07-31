@@ -11,7 +11,8 @@ const mapStateToProps = (state, ownProps) => {
   return ({
     currentUser: state.session.currentUser,
     channel: state.entities.channels[channelId],
-    channels: selectAllChannels(state)
+    channels: selectAllChannels(state),
+    subscriptions: state.entities.subscriptions
   })
 }
 
@@ -20,6 +21,7 @@ const mapDispatchToProps = (dispatch) => {
     fetchChannels: () => dispatch(fetchChannels()),
     createSubscription: (subscription) => dispatch(createSubscription(subscription)),
     fetchSubscriptions: () => dispatch(fetchSubscriptions()),
+    openModal: modal => dispatch(openModal(modal)),
     openModal: modal => dispatch(openModal(modal)),
     logout: () => dispatch(logout())
   })

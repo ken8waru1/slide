@@ -14,7 +14,7 @@ class ChannelIndex extends React.Component {
   render () {
     const { channels, currentUser } = this.props;
     const publicChannels = channels.filter(channel => !channel.isDirectMessage);
-    const directMessages = channels.filter(channel => channel.isDirectMessage);
+    const directMessages = channels.filter(channel => channel.isDirectMessage );
     const currentChannelId = this.props.match.params.channelId;
     return (
       <div className="chat-container">
@@ -33,6 +33,11 @@ class ChannelIndex extends React.Component {
           <div className="channel-list">
             <div className="channel-header">Channels<img className="plus-circle" onClick={() => this.props.openModal('createChannel')} src={window.images.pluscircle} /></div>
             {publicChannels.map(channel => <ChannelIndexItem key={channel.id} channel={channel} currentChannel={currentChannelId} />)}
+          </div>
+
+          <div className="dm-list">
+            <div className="dm-header">Direct Messages<img className="plus-circle" onClick={() => this.props.openModal('createDM')} src={window.images.pluscircle} /></div>
+            {directMessages.map(channel => <ChannelIndexItem key={channel.id} channel={channel} currentChannel={currentChannelId} />)}
           </div>
         </div>
         <div className="chat-box">

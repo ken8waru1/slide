@@ -2,7 +2,7 @@ import React from 'react';
 
 class CreateChannelForm extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       name: '',
       purpose: '',

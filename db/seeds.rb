@@ -65,6 +65,12 @@ ActiveRecord::Base.transaction do
     creator_id: nasu.id
   })
 
+  demo_dm_1 = Channel.create!({
+    name: 'zooey',
+    creator_id: demo_user.id,
+    is_direct_message: true,
+  })
+
   users = User.all
 
   general_subscription_zooey = Subscription.create!({
@@ -85,6 +91,16 @@ ActiveRecord::Base.transaction do
   granblue_subscription_producer = Subscription.create!({
     user_id: producer.id,
     channel_id: granblue_channel.id
+  })
+
+  demo_dm_1_sub = Subscription.create!({
+    user_id: demo_user.id,
+    channel_id: demo_dm_1.id
+  })
+
+  demo_dm_1_sub = Subscription.create!({
+    user_id: zooey.id,
+    channel_id: demo_dm_1.id
   })
 
   users.each do |user| 
@@ -168,5 +184,29 @@ ActiveRecord::Base.transaction do
     body: 'Read Fate next',
     user_id: nasu.id,
     channel_id: visual_novel_channel.id
+  })
+
+  Message.create({
+    body: 'Can you do me a favor?',
+    user_id: demo_user.id,
+    channel_id: demo_dm_1.id
+  })
+
+  Message.create({
+    body: "Yeah, what's going on?",
+    user_id: zooey.id,
+    channel_id: demo_dm_1.id
+  })
+
+  Message.create({
+    body: "I left my journal on the ship, can you bring it to Siero's store for me?",
+    user_id: demo_user.id,
+    channel_id: demo_dm_1.id
+  })
+
+  Message.create({
+    body: "Leave it to me!",
+    user_id: zooey.id,
+    channel_id: demo_dm_1.id
   })
 end
