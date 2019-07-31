@@ -23,13 +23,13 @@ class Api::SubscriptionsController < ApplicationController
   def destroy
     @subscription = Subscription.find_by(id: params[:id])
     @subscription.destroy!
-    @channel = Channel.find(@subscription.channel_id)
-    if @channel.is_direct_message
+    # @channel = Channel.find(@subscription.channel_id)
+    # if @channel.is_direct_message
       # @subscription_2 = Subscription.find_by(@channel_id)
       # @subscription_2.destroy!
-      @channel.messages.each { |message| message.destroy! }
+      # @channel.messages.each { |message| message.destroy! }
       # @channel.destroy!
-    end
+    # end
     render json: { }
   end
 
