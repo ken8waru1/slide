@@ -160,6 +160,12 @@
   border: 1px solid black;
   background-color: transparent;
   width: 100%;
+  margin-bottom: 20px;
+}
+
+.dm-input:focus {
+  outline: none;
+  border: 1px solid #667BC4;
 }
 
 .search-container {
@@ -168,9 +174,16 @@
 
 .search-item {
   color: white;
-  padding: 20px 20px 20px 0;
+  padding: 20px 20px 20px 10px;
   font-family: 'Lato', sans-serif;
   font-size: 18px;
+  border-top: 1px solid #4e525a;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.search-item:hover {
+  background-color: #54565c;
 }
 
 .channel-input:focus {
