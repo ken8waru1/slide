@@ -11,7 +11,8 @@ const mapStateToProps = (state, ownProps) => {
   return ({
     currentUser: state.session.currentUser,
     channel: state.entities.channels[channelId],
-    channels: selectAllChannels(state)
+    channels: selectAllChannels(state),
+    subscriptions: state.entities.subscriptions
   })
 }
 

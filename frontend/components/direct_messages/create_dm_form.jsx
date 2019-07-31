@@ -1,16 +1,9 @@
 import React from 'react';
+import SearchContainer from './search_container';
 
 class CreateDMForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      name: 'Other User Name',
-      purpose: '',
-      creator_id: this.props.currentUser.id,
-      is_direct_message: true
-    }
-
-    this.handleClick = this.handleClick.bind(this);
   }
 
   updateField(field) {
@@ -19,25 +12,12 @@ class CreateDMForm extends React.Component {
     };
   }
 
-  handleClick(e) {
-    e.preventDefault();
-    this.props.createChannel(this.state).then(channelInfo => {
-      this.props.closeModal();
-      this.props.fetchSubscriptions();
-      this.props.fetchChannel(channelInfo.channel.id)
-      return (
-        this.props.history.push(`/channels/${channelInfo.channel.id}`)
-      )
-    })
-  }
-
   render() {
     return (
-      <div className="contents-container">
-        <div className="channel-form-container">
-          <h1 className="create-channel-header">Direct Messsages</h1>
-
-          <button className="channel-cancel" onClick={this.props.closeModal} >Cancel</button>
+      <div className="dm-contents-container">
+        <div className="dm-form-container">
+          <div onClick={this.props.closeModal} className="esc-container"><i className="fas fa-times"></i>esc</div>
+          <SearchContainer />
         </div>
       </div>
     )

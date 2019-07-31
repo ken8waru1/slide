@@ -11,7 +11,7 @@ class Api::SubscriptionsController < ApplicationController
   
   def create 
     @subscription = Subscription.new(subscription_params)
-    @subscription.user_id = current_user.id
+    @subscription.user_id = subscription_params.has_key?(:user_id) ? subscription_params[:user_id] : current_user.id;
 
     if @subscription.save
       render :show 
