@@ -2,7 +2,7 @@ import ChatRoom from './chatroom';
 import { connect } from 'react-redux'
 import React from 'react';
 import { fetchChannels, fetchChannel, fetchUsers, createChannelSubscription } from '../../actions/channel_actions'
-import { fetchMessage, fetchMessages, receiveMessage } from '../../actions/message_actions';
+import { fetchMessages, receiveMessage } from '../../actions/message_actions';
 import { withRouter } from 'react-router-dom'; 
 const mapStateToProps = (state, ownProps) => {
   return ({
@@ -20,7 +20,6 @@ const mapDispatchToProps = (dispatch) => {
     fetchChannel: (id) => dispatch(fetchChannel(id)),
     fetchUsers: (id) => dispatch(fetchUsers(id)),
     receiveMessage: (message) => dispatch(receiveMessage(message)),
-    fetchMessage: (id) => dispatch(fetchMessage(id)),
     fetchMessages: (id) => dispatch(fetchMessages(id)),
     createChannelSubscription: (channelId, receiveMessage) => (dispatch(createChannelSubscription(channelId, receiveMessage)))
   };

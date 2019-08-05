@@ -42,6 +42,7 @@ export const fetchMessages = (id) => {
   });
 };
 
+
 export const fetchUsers = (id) => {
   return $.ajax({
     method: 'GET',

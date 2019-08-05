@@ -15,7 +15,3 @@ export const receiveMessage = (message) => ({
 export const fetchMessages = (channelId) => (dispatch) => (
   ChannelApiUtil.fetchMessages(channelId).then(messages => dispatch(receiveMessages(messages)))
 )
-
-export const fetchMessage = (id) => (dispatch) => {
-  ChannelApiUtil.fetchMessage(id).then(message => dispatch(receiveMessage(message)))
-}
