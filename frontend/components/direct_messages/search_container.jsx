@@ -10,7 +10,9 @@ const mapStateToProps = (state, ownProps) => {
   const currentUser = state.session.currentUser;
   return ({
     users: Object.values(state.entities.users),
-    currentUser: currentUser
+    channels: Object.values(state.entities.channels),
+    currentUser: currentUser,
+    subscriptions: Object.values(state.entities.subscriptions)
   })
 }
 
