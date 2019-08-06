@@ -22,7 +22,6 @@ class ChannelIndex extends React.Component {
     const currentChannelId = this.props.match.params.channelId;
     const subbedChannels = this.props.subscriptions.map(subscription => subscription.channelId);
     const currentChannel = parseInt(this.props.match.params.channelId)
-    // debugger
     return (
       <div className="chat-container">
         <div className="chat-sidebar">
@@ -52,14 +51,12 @@ class ChannelIndex extends React.Component {
           {subbedChannels.includes(currentChannel) ? 
             <ChatRoomContainer />
             :
-            // <div className="join-wrapper">
-              <div className="join-container">
-                <div className="join-message-container">
-                  <div className="join-message">You are viewing <span className="join-message-channel"># {this.props.channel ? this.props.channel.name : ''}</span></div>
-                  <div className="join-message">Join this channel to view conversations</div>
-                </div>
+            <div className="join-container">
+              <div className="join-message-container">
+                <div className="join-message">You are viewing <span className="join-message-channel"># {this.props.channel ? this.props.channel.name : ''}</span></div>
+                <div className="join-message">Join this channel to view conversations</div>
               </div>
-            // </div>
+            </div>
           }
         </div>
       </div>
