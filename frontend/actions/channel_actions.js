@@ -3,7 +3,6 @@ export const RECEIVE_ALL_CHANNELS = 'RECEIVE_ALL_CHANNELS';
 export const RECEIVE_CHANNEL = 'RECEIVE_CHANNEL';
 export const REMOVE_CHANNEL = 'REMOVE_CHANNEL';
 export const RECEIVE_ALL_USERS = 'RECEIVE_ALL_USERS';
-import { receiveMessage } from './message_actions'
 
 const receiveAllChannels = (channels) => ({
   type: RECEIVE_ALL_CHANNELS,
