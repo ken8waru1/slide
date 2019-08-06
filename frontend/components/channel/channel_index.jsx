@@ -52,12 +52,14 @@ class ChannelIndex extends React.Component {
           {subbedChannels.includes(currentChannel) ? 
             <ChatRoomContainer />
             :
-            <div className="join-wrapper">
+            // <div className="join-wrapper">
               <div className="join-container">
-                <div className="join-message">You are viewing <span className="join-message-channel"># {this.props.channel ? this.props.channel.name : ''}</span></div>
-                <div className="join-message">Join this channel to view conversations</div>
+                <div className="join-message-container">
+                  <div className="join-message">You are viewing <span className="join-message-channel"># {this.props.channel ? this.props.channel.name : ''}</span></div>
+                  <div className="join-message">Join this channel to view conversations</div>
+                </div>
               </div>
-            </div>
+            // </div>
           }
         </div>
       </div>

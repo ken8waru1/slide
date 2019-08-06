@@ -370,11 +370,34 @@
   justify-content: space-between;
 }
 
+// .join-wrapper {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   height: 100%;
+// }
+
+.join-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  align-items: center;
+}
+
 .join-message {
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 300;
   font-family: 'Lato', sans-serif;
+}
+
+.join-message-container {
+  width: 100%;
+  background-color: #23272A;
+  text-align: center;
+  padding-bottom: 40px;
+  padding-top: 40px;
 }
 
 .join-message-channel {
