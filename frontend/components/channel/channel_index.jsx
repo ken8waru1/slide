@@ -52,9 +52,10 @@ class ChannelIndex extends React.Component {
             <ChatRoomContainer />
             :
             <div className="join-container">
+              <img src={window.images.yui} />
               <div className="join-message-container">
                 <div className="join-message">You are viewing <span className="join-message-channel"># {this.props.channel ? this.props.channel.name : ''}</span></div>
-                <div className="join-message">Join this channel to view conversations</div>
+                <div className="join-message">Join this channel to view conversations (please)</div>
               </div>
             </div>
           }
