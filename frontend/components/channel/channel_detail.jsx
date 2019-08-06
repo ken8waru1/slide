@@ -1,6 +1,4 @@
 import React from 'react';
-import ChatRoomContainer from "../chatroom/chatroom_container"
-import { Route } from 'react-router-dom';
 
 class ChannelDetail extends React.Component {
 
@@ -66,14 +64,16 @@ class ChannelDetail extends React.Component {
             <span className="subscriber-count">{this.state.subscribeCount}</span>
           </div>
         </div>
-        {this.props.channel && subbedChannels.includes(this.props.channel.id) ?
+        {!this.props.channel.isDirectMessage ?
+        this.props.channel && subbedChannels.includes(this.props.channel.id) ?
           <div className="delete-sub-btn-container">
-            <button className="delete-sub-btn" onClick={this.handleDelete}>{ this.props.channel.isDirectMessage ? 'Leave Conversation' : 'Leave Channel' }</button>
+            <button className="delete-sub-btn" onClick={this.handleDelete}>Leave Channel</button>
           </div> :
           <div className="sub-btn-container">
-            <button className="sub-btn" onClick={this.handleSubscribe}>{ this.props.channel.isDirectMessage ? 'Rejoin Conversation' : 'Join Channel'}</button>
+            <button className="sub-btn" onClick={this.handleSubscribe}>Join Channel</button>
           </div>
-        }
+        : <></>
+      }
       </div>
     )
   }

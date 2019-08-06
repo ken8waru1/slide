@@ -1,6 +1,6 @@
 import ChatRoom from './chatroom';
-import { connect } from 'react-redux'
-import React from 'react';
+import { connect } from 'react-redux';
+import { selectAllSubscriptions } from '../../reducers/selectors';
 import { fetchChannels, fetchChannel, fetchUsers, createChannelSubscription } from '../../actions/channel_actions'
 import { fetchMessages, receiveMessage } from '../../actions/message_actions';
 import { withRouter } from 'react-router-dom'; 
@@ -10,7 +10,8 @@ const mapStateToProps = (state, ownProps) => {
     users: Object.values(state.entities.users),
     channels: Object.values(state.entities.channels),
     messages: Object.values(state.entities.messages),
-    channel: ownProps.match.params.channelId
+    channel: ownProps.match.params.channelId,
+    subscriptions: selectAllSubscriptions(state)
   });
 };
 

@@ -54,10 +54,10 @@ class ChatRoom extends React.Component {
         <></>
       )
     }
+    const subbedChannels = this.props.subscriptions.map(subscription => subscription.channelId);
     const messageList = this.props.messages.map(message => {
       let image = ''; 
       let newMessage = Object.assign({}, message);
-
       if (message.body.includes('jpg')) {
         image = message.body.slice(message.body.indexOf('https'), message.body.indexOf('jpg')) + 'jpg'
         if (message.body.length > image.length) newMessage.body = message.body.replace(image, '') 
@@ -72,7 +72,6 @@ class ChatRoom extends React.Component {
         <MessageIndexItem currentUser={this.props.currentUser} message={newMessage} image={image} key={message.id} users={this.props.users} />
       );
     });
-
     return (
       <div className="chat-body">
         <div className="chat-message-box">
