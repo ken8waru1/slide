@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'open-uri'
+
 ActiveRecord::Base.transaction do
   User.destroy_all
   Channel.destroy_all
@@ -16,17 +18,26 @@ ActiveRecord::Base.transaction do
     password: "girlsdemo"
   })
 
+  demo_avatar = open('https://slide-dev.s3-us-west-1.amazonaws.com/rin.png')
+  demo_user.avatar.attach(io: demo_avatar, filename: 'rin')
+
   zooey = User.create!({
     email: "voltronzooey@gbf.com",
     display_name: "zooey",
     password: "granblue"
   })
 
+  zooey_avatar  = open('https://slide-dev.s3-us-west-1.amazonaws.com/zooey.png')
+  zooey.avatar.attach(io: zooey_avatar, filename: 'zooey')
+
   producer = User.create!({
     email: "psan@imas.com",
     display_name: "producer",
     password: "idolmaster"
   })
+
+  producer_avatar  = open('https://slide-dev.s3-us-west-1.amazonaws.com/producer.png')
+  producer.avatar.attach(io: producer_avatar, filename: 'producer')
 
   dant = User.create!({
     email: "dant@mcdonaldslovers",
@@ -39,6 +50,9 @@ ActiveRecord::Base.transaction do
     display_name: "nasu",
     password: "tsukihime2"
   })
+
+  nasu_avatar  = open('https://slide-dev.s3-us-west-1.amazonaws.com/nasu.png')
+  nasu.avatar.attach(io: nasu_avatar, filename: 'nasu')
 
   general_channel = Channel.create!({
     name: "general",

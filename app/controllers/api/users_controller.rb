@@ -1,15 +1,14 @@
+require 'open-uri'
+
 class Api::UsersController < ApplicationController
 
   def index
-    # @channel = Channel.find_by(id: params[:channel_id])
-    # @users = @channel.subscribed_users
     @users = User.all;
     render :index
   end
 
   def create
     @user = User.new(user_params)
-
     if @user.save
       login(@user)
       render :show

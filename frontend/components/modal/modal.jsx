@@ -15,6 +15,9 @@ function Modal({ modal, closeModal, currentUser }) {
     case 'createDM':
       component = <CreateDMFormContainer currentUser={currentUser} />
       break;
+    case 'settings-menu':
+      component = null;
+      break;
     default:
       return null;
   }
