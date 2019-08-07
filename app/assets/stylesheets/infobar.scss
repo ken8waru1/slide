@@ -1,0 +1,147 @@
+.infobar-container-active {
+  display: flex;
+  justify-content: flex-end;
+  border-left: 1px solid #1C1E22;
+  width: 40%;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.infobar-container-inactive {
+  width: 0px;
+  min-width: 0px;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1)
+}
+
+.infobar {
+  background-color: #2F3136;
+  min-width: 311px;
+  width: 100%;
+}
+
+.about-channel {
+  height: 48px;
+  background-color: #2B2C31;
+  border-bottom: 1px solid #1C1E22;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 15px
+}
+
+.about-channel-header {
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.channel-details-collapsed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  height: 48px;
+  max-height: 48px;
+}
+
+.channel-details-expanded {
+  transition: all 0.2s ease-in-out;
+}
+
+.channel-details-open {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  height: 48px;
+  max-height: 48px;
+}
+
+.channel-details-wrapper {
+  background-color: #36393F;
+  border-bottom: 1px solid #1C1E22;
+  padding: 0 15px;
+}
+
+.fas {
+  margin: 0;
+}
+
+.info-circle--bar {
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.info--user {
+  font-size: 18px;
+  margin-right: 13px;
+}
+
+.fa-user {
+  margin-top: 0;
+}
+
+.member-item {
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  padding: 5px 0;
+}
+
+.member-item:after {
+  content: "\25CF";
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  color: #39E103;
+  margin-left: 10px;
+}
+
+.fa-caret-right {
+  color: white;
+  font-size: 15px;
+  align-self: baseline;
+}
+
+.fa-caret-down {
+  color: white;
+  font-size: 15px;
+  align-self: baseline;
+}
+
+.hidden-details {
+  display: none;
+}
+
+.channel-details-header {
+  display: inline;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.channel-details-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cd-expanded-header {
+  color: #B9BBBE;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+}
+
+.cd-expanded-name {
+  padding-top: 10px;
+  padding-bottom: 30px;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.caret-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

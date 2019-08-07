@@ -6,15 +6,18 @@ class ChannelDetail extends React.Component {
     super(props);
     this.handleDelete = this.handleDelete.bind(this);
     this.handleSubscribe = this.handleSubscribe.bind(this);
+    this.infoStatus = this.props.infoStatus;
     this.state = {
       subscribeCount: this.props.subscribeCount
     }
+    this.handleToggle = this.handleToggle.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchChannel(this.props.match.params.channelId).then(action =>
       this.setState({ subscribeCount: action.channel.subscribeCount})
-    )
+    );
+    this.props.openInfoBar('open');
   }
 
   componentDidUpdate(prevProps) {
@@ -46,6 +49,14 @@ class ChannelDetail extends React.Component {
     this.props.createSubscription({ current_user: this.props.currentUser, channel_id: this.props.channel.id })
     this.setState({subscribeCount: this.state.subscribeCount += 1})
   }
+
+  handleToggle() {
+    if (this.props.infoStatus) {
+      this.props.closeInfoBar();
+    } else {
+      this.props.openInfoBar('open');
+    }
+  }
   
   render () {
     if (!this.props.channel) {
@@ -64,16 +75,23 @@ class ChannelDetail extends React.Component {
             <span className="subscriber-count">{this.state.subscribeCount}</span>
           </div>
         </div>
-        {!this.props.channel.isDirectMessage ?
-        this.props.channel && subbedChannels.includes(this.props.channel.id) ?
-          <div className="delete-sub-btn-container">
-            <button className="delete-sub-btn" onClick={this.handleDelete}>Leave Channel</button>
-          </div> :
-          <div className="sub-btn-container">
-            <button className="sub-btn" onClick={this.handleSubscribe}>Join Channel</button>
+        <div className="details-right">
+          <div className="info-toggle" onClick={this.handleToggle} >
+            <div className={this.props.infoStatus === 'open' ? 'active-info' : 'inactive-info'}>
+              <div className="info-wrapper"><i className="fas fa-info-circle info-circle--details"></i></div>
+            </div>
           </div>
-        : <></>
-      }
+          {!this.props.channel.isDirectMessage ?
+          this.props.channel && subbedChannels.includes(this.props.channel.id) ?
+            <div className="delete-sub-btn-container">
+              <button className="delete-sub-btn" onClick={this.handleDelete}>Leave Channel</button>
+            </div> :
+            <div className="sub-btn-container">
+              <button className="sub-btn" onClick={this.handleSubscribe}>Join Channel</button>
+            </div>
+          : <></>
+          }
+        </div>
       </div>
     )
   }
