@@ -54,24 +54,9 @@ class ChatRoom extends React.Component {
         <></>
       )
     }
-    const subbedChannels = this.props.subscriptions.map(subscription => subscription.channelId);
-    const messageList = this.props.messages.map(message => {
-      let image = ''; 
-      let newMessage = Object.assign({}, message);
-      if (message.body.includes('jpg')) {
-        image = message.body.slice(message.body.indexOf('https'), message.body.indexOf('jpg')) + 'jpg'
-        if (message.body.length > image.length) newMessage.body = message.body.replace(image, '') 
-      } else if (message.body.includes('png')) {
-        image = message.body.slice(message.body.indexOf('https'), message.body.indexOf('png')) + 'png'
-        if (message.body.length > image.length) newMessage.body = message.body.replace(image, '') 
-      } else if (message.body.includes('gif')) {
-        image = message.body.slice(message.body.indexOf('https'), message.body.indexOf('gif')) + 'gif'
-        if (message.body.length > image.length) newMessage.body = message.body.replace(image, '') 
-      }
-      return (
-        <MessageIndexItem currentUser={this.props.currentUser} message={newMessage} image={image} key={message.id} users={this.props.users} />
-      );
-    });
+    const messageList = this.props.messages.map(message =>
+        <MessageIndexItem currentUser={this.props.currentUser} message={message} key={message.id} users={this.props.users} />
+    );
     return (
       <div className="chat-body">
         <div className="chat-message-box">
@@ -81,7 +66,7 @@ class ChatRoom extends React.Component {
               <div ref={this.bottom}></div>
             </div>
           </div>
-          <MessageForm channel={this.props.channel} currentUser={this.props.currentUser} />
+          <MessageForm channel={this.props.channel} currentUser={this.props.currentUser} users={this.props.users}/>
         </div>
         <InfoBarContainer />
       </div>

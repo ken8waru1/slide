@@ -1,23 +1,23 @@
 import React from 'react';
 import moment from 'moment';
 
-const MessageIndexItem = ({ message, image }) => {
+const MessageIndexItem = ({ message, users }) => {
+  const user = users.find(user => user.id === message.author.id);
+
   return (
     <div className="message">
-      <div className="message-header">
-        <div className="display-name">{message.author.display_name}</div>
-        <div className="time">{moment(message.createdAt).calendar()}</div>
+      <div className="chat-avatar-container">
+        <img src={user.avatar ? user.avatar : window.images.djeeta} className="chat-avatar" />
       </div>
-      {image ? (
-        <div className="message-body">
-          <div>{image.length !== message.body.length ? message.body : ''}</div>
-          <img className="image-link" src={`${image}`}/>
-        </div> ) : (
+      <div className="message-contents">
+        <div className="message-header">
+          <div className="display-name">{message.author.display_name}</div>
+          <div className="time">{moment(message.createdAt).calendar()}</div>
+        </div>
         <div className="message-body">
           {message.body}
         </div> 
-        ) 
-      }
+      </div>
     </div>
   )
 }

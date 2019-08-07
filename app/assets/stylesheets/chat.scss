@@ -113,6 +113,15 @@
   height: 62px;
 }
 
+.chat-avatar-container {
+  padding-right: 10px;
+}
+
+.chat-avatar {
+  width: 36px;
+  border-radius: .25rem;
+}
+
 .fa-user {
   margin-top: 10px;
   font-size: 13px;
@@ -211,6 +220,7 @@
 .message {
   color: white;
   margin-top: 9px;
+  display: flex;
 }
 
 .message-header {
