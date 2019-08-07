@@ -1,7 +1,7 @@
 import React from 'react';
 import MessageForm from './message_form';
 import MessageIndexItem from '../message/message_index_item'
-
+import InfoBarContainer from '../infobar/infobar_container'
 class ChatRoom extends React.Component {
   constructor(props) {
     super(props);
@@ -83,6 +83,7 @@ class ChatRoom extends React.Component {
           </div>
           <MessageForm channel={this.props.channel} currentUser={this.props.currentUser} />
         </div>
+        <InfoBarContainer />
       </div>
     );
   }

@@ -48,6 +48,44 @@
   background-color: #667BC4
 }
 
+.info-circle--details {
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+.inactive-info {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.active-info {
+  height: 30px;
+  width: 30px;
+  background-color: #2B2C31;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: .25rem;
+}
+
+.info-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.info-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.details-right {
+  display: flex;
+}
+
 .chat-header {
   display: flex;
   flex-direction: row;
@@ -82,8 +120,6 @@
 }
 
 .chat-box {
-  // background-color: #36393F;
-  // width: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;

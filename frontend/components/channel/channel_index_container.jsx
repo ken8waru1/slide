@@ -24,7 +24,6 @@ const mapDispatchToProps = (dispatch) => {
     fetchSubscriptions: () => dispatch(fetchSubscriptions()),
     createSubscription: (subscription) => dispatch(createSubscription(subscription)),
     openModal: modal => dispatch(openModal(modal)),
-    openModal: modal => dispatch(openModal(modal)),
     logout: () => dispatch(logout())
   })
 }
