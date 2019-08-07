@@ -48,9 +48,15 @@
   background-color: #667BC4
 }
 
-.info-circle--details {
+.info-circle--closed {
   font-size: 20px;
   margin: 0 auto;
+}
+
+.info-circle--open {
+  font-size: 20px;
+  margin: 0 auto;
+  color: white;
 }
 
 .inactive-info {
@@ -199,6 +205,7 @@
   flex-direction: column;
   justify-content: flex-end;
   min-height: calc(100% - 80px);
+  word-break: break-word;
 }
 
 .message {

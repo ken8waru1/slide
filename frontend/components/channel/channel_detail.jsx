@@ -78,7 +78,7 @@ class ChannelDetail extends React.Component {
         <div className="details-right">
           <div className="info-toggle" onClick={this.handleToggle} >
             <div className={this.props.infoStatus === 'open' ? 'active-info' : 'inactive-info'}>
-              <div className="info-wrapper"><i className="fas fa-info-circle info-circle--details"></i></div>
+              <div className="info-wrapper"><i className={`fas fa-info-circle info-circle--${ this.props.infoStatus === 'open' ? 'open' : 'closed'}` }></i></div>
             </div>
           </div>
           {!this.props.channel.isDirectMessage ?

@@ -1,6 +1,6 @@
 import React from 'react';
 import ChannelIndexItem from './channel_index_item';
-import { Route, Redirect } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import ChannelDetailContainer from './channel_detail_container';
 import ChatRoomContainer from '../chatroom/chatroom_container'
 
