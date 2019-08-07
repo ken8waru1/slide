@@ -240,12 +240,11 @@
 }
 
 .message-input-container {
-  display: block;
   margin: 0 12px 0 18px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 20px;
+  height: 490px;
   width: calc(100% - 50px);
 }
 
