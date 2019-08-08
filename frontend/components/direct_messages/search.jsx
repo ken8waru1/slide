@@ -26,7 +26,7 @@ class Search extends React.Component {
         this.props.history.push(`/channels/${this.props.channels[existingDM].id}`)
       );
     } else {
-      this.setState({ name: user.displayName });
+      this.setState({ name: user.displayName + this.props.currentUser.displayName });
       this.props.createChannel(channelParams).then(channelInfo => {
         this.props.closeModal();
         this.props.createSubscription({ user_id: user.id, channel_id: channelInfo.channel.id });
@@ -46,7 +46,7 @@ class Search extends React.Component {
   }
 
   render() {
-    const userResults = this.props.users.filter(user => user.displayName.includes(this.state.displayName));
+    const userResults = this.props.users.filter(user => user.displayName.includes(this.state.displayName) && user.id !== this.props.currentUser.id);
     return (
       <div className="search-container">
         <h1 className="create-dm-header">Direct Messsages</h1>

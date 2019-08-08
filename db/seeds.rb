@@ -80,7 +80,7 @@ ActiveRecord::Base.transaction do
   })
 
   demo_dm_1 = Channel.create!({
-    name: 'zooey',
+    name: 'zooeydemo',
     creator_id: demo_user.id,
     is_direct_message: true,
   })

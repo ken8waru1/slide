@@ -7,11 +7,10 @@ import { withRouter } from 'react-router-dom';
 import Search from './search';
 
 const mapStateToProps = (state, ownProps) => {
-  const currentUser = state.session.currentUser;
   return ({
     users: Object.values(state.entities.users),
     channels: Object.values(state.entities.channels),
-    currentUser: currentUser,
+    currentUser: state.session.currentUser,
     subscriptions: Object.values(state.entities.subscriptions)
   })
 }

@@ -18,9 +18,10 @@ class ChannelIndex extends React.Component {
   render () {
     const { channels, currentUser } = this.props;
     const publicChannels = channels.filter(channel => !channel.isDirectMessage);
-    const directMessages = channels.filter(channel => channel.isDirectMessage );
-    const currentChannelId = this.props.match.params.channelId;
     const subbedChannels = this.props.subscriptions.map(subscription => subscription.channelId);
+    const directMessages = channels.filter(channel => channel.isDirectMessage &&  subbedChannels.includes(channel.id));
+    directMessages.forEach(dm => dm.name = dm.name.replace(currentUser.displayName, ''))
+    const currentChannelId = this.props.match.params.channelId;
     const currentChannel = parseInt(this.props.match.params.channelId)
     return (
       <div className="chat-container">
