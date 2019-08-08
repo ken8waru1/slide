@@ -17,9 +17,16 @@ class InfoBar extends React.Component {
   }
 
   render() {
+
+
     const { channel, users } = this.props;
     const channelSubscriptions = channel.subscriptions.map(subscription => subscription.user_id);
     const subscribedUsers = users.filter(user => channelSubscriptions.includes(user.id));
+    
+    if (channel.isDirectMessage) {
+      return null;
+    }
+
     return (
       <div className={`infobar-container-${this.props.infoBar ? 'active' : 'inactive'}`} >
         <div className="infobar">

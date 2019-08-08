@@ -76,11 +76,13 @@ class ChannelDetail extends React.Component {
           </div>
         </div>
         <div className="details-right">
-          <div className="info-toggle" onClick={this.handleToggle} >
-            <div className={this.props.infoStatus === 'open' ? 'active-info' : 'inactive-info'}>
-              <div className="info-wrapper"><i className={`fas fa-info-circle info-circle--${ this.props.infoStatus === 'open' ? 'open' : 'closed'}` }></i></div>
+          {this.props.channel.isDirectMessage ? <></> :
+            <div className="info-toggle" onClick={this.handleToggle} >
+              <div className={this.props.infoStatus === 'open' ? 'active-info' : 'inactive-info'}>
+                <div className="info-wrapper"><i className={`fas fa-info-circle info-circle--${ this.props.infoStatus === 'open' ? 'open' : 'closed'}` }></i></div>
+              </div>
             </div>
-          </div>
+          }
           {!this.props.channel.isDirectMessage ?
           this.props.channel && subbedChannels.includes(this.props.channel.id) ?
             <div className="delete-sub-btn-container">
