@@ -1,5 +1,5 @@
 # Slide
-[Live Demo](https://slide-fps.herokuapp.com/#/)
+[Live Demo](https://slide-kh.herokuapp.com/#/)
 
 Slide is a real-time messaging app cloned from [Slack](https://slack.com/) with a color theme inspired by [Discord](https://discordapp.com/) over a period of 10 days. Users can send messages to each other via channels that they create. 
 
