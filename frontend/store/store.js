@@ -12,3 +12,20 @@ const configureStore = (preloadedState = {}) => (
 );
 
 export default configureStore;
+
+function casino(n, k) {
+  if (n === 2) return 1;
+  let rounds = 0;
+  let currentN = n;
+  for (let i = 0; i < k; i++) {
+    if (currentN % 2 === 0) {
+      currentN = currentN / 2;
+    } else {
+      currentN = Math.floor(currentN / 2);
+      rounds += 1;
+    }
+    rounds += 1;
+  }
+
+  return rounds + currentN - 1;
+}
